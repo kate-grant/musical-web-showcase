@@ -80,21 +80,26 @@ var WIDTH = window.innerWidth,
         /**/
         var distance = 100;    
         var geometry = new THREE.BufferGeometry();
+      
 
-        for (var i = 0; i < 1000; i++) {
+        for (var i = 0; i < 100; i++) {
 
             var vertex = new THREE.Vector3();
             
             var theta = THREE.MathUtils.randFloatSpread(360);
             var phi = THREE.MathUtils.randFloatSpread(360);
+          
+            const vertices = [];
             
-            vertex.x = distance * Math.sin(theta) * Math.cos(phi);
-            vertex.y = distance * Math.sin(theta) * Math.sin(phi);
-            vertex.z = distance * Math.cos(theta);
+            let x = distance * Math.sin(theta) * Math.cos(phi);
+            let y = distance * Math.sin(theta) * Math.sin(phi);
+            let z = distance * Math.cos(theta);
 
-            geometry.vertices.push(vertex);
+            vertices.push( x, y, z );
+
+            geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
         }
-        var particles = new THREE.PointCloud(geometry, new THREE.PointCloudMaterial({color: 0xffffff}));
+        var particles = new THREE.Points(geometry, new THREE.PointsMaterial({color: 0xffffff}));
         particles.boundingSphere = 50;
         //var particles = new THREE.Mesh(geometry, sphereMaterial);
         scene.add(particles);
