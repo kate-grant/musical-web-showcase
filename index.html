@@ -84,7 +84,6 @@ var WIDTH = window.innerWidth,
 
         for (var i = 0; i < 100; i++) {
 
-            var vertex = new THREE.Vector3();
             
             var theta = THREE.MathUtils.randFloatSpread(360);
             var phi = THREE.MathUtils.randFloatSpread(360);
@@ -94,8 +93,10 @@ var WIDTH = window.innerWidth,
             let x = distance * Math.sin(theta) * Math.cos(phi);
             let y = distance * Math.sin(theta) * Math.sin(phi);
             let z = distance * Math.cos(theta);
+          
 
-            vertices.push( x, y, z );
+
+            vertices.push( distance * Math.sin(theta) * Math.cos(phi), distance * Math.sin(theta) * Math.sin(phi);, distance * Math.cos(theta));
 
             geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
         }
