@@ -1,76 +1,68 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { Scene, SphereGeometry, Vector3, PerspectiveCamera, WebGLRenderer, Color, MeshBasicMaterial, Mesh, Clock } from 'three';
+import { OrbitControls } from 'https://unpkg.com/three@0.146/examples/jsm/controls/OrbitControls.js';
+import { createSculptureWithGeometry } from 'https://unpkg.com/shader-park-core/dist/shader-park-core.esm.js';
+import { spCode } from '/sp-code.js';
 
-console.log(THREE);
+let scene = new Scene();
 
-var WIDTH = window.innerWidth,
-        HEIGHT = window.innerHeight,
-        ASPECT = WIDTH / HEIGHT,
-        VIEW_ANGLE = 45, NEAR = 0.1, FAR = 10000;
+let camera = new PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+camera.position.z = 5.5;
 
-    var container, renderer, camera, scene, sphere;
+let renderer = new WebGLRenderer({ antialias: true, transparent: true });
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setClearColor( new Color(1, 1, 1), 0);
+document.body.appendChild( renderer.domElement );
 
-    function init() {
-        var directionalLight;
+let clock = new Clock();
 
-        //div element that will hold renderer
-        container = document.createElement('div');
-        document.body.appendChild(container);
+let button = document.querySelector('.button');
+button.innerHTML = "Loading Audio..."
+button.style.display = 'none';
 
-        //renderer
-        renderer = new THREE.WebGLRenderer();
-        renderer.setSize(WIDTH, HEIGHT);
-        container.appendChild(renderer.domElement);
+let state = {
+  mouse : new Vector3(),
+  currMouse : new Vector3(),
+  // audio: 0.0,
+  // currAudio: 0.0,
+  time: 0.0,
+}
 
-        //camera
-        camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
-        camera.position.z = 300;
+// create our geometry and material
+let geometry  = new SphereGeometry(2, 45, 45);
 
-        //lights
-        renderer.gammaInput = true;
-        renderer.gammaOutput = true;
+let mesh = createSculptureWithGeometry(geometry, spCode(), () => {
+  return {
+    time: state.time,
+    mouse: state.mouse,
+    // audio: state.audio,
+  }
+})
 
-        renderer.setClearColor(0x909090, 1.0);
-        directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
-        directionalLight.position.set(0, -1, 0);
+scene.add(mesh);
 
-        scene = new THREE.Scene();
-        scene.add(camera);
-        scene.add(directionalLight);
-        //scene.add(sphere);
+// Add mouse controlls
+let controls = new OrbitControls( camera, renderer.domElement, {
+  enableDamping : true,
+  dampingFactor : 0.25,
+  zoomSpeed : 0.0,
+  rotateSpeed : 0.5
+} );
 
-        /**/
-        var distance = 100;    
-        var geometry = new THREE.Geometry();
+let onWindowResize = () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+}
 
-        for (var i = 0; i < 1000; i++) {
+window.addEventListener( 'resize', onWindowResize );
 
-            var vertex = new THREE.Vector3();
-            
-            var theta = THREE.Math.randFloatSpread(360);
-            var phi = THREE.Math.randFloatSpread(360);
-            
-            vertex.x = distance * Math.sin(theta) * Math.cos(phi);
-            vertex.y = distance * Math.sin(theta) * Math.sin(phi);
-            vertex.z = distance * Math.cos(theta);
 
-            geometry.vertices.push(vertex);
-        }
-        var particles = new THREE.PointCloud(geometry, new THREE.PointCloudMaterial({color: 0xffffff}));
-        particles.boundingSphere = 50;
-        //var particles = new THREE.Mesh(geometry, sphereMaterial);
-        scene.add(particles);
-        /**/
+let render = () => {
+  requestAnimationFrame( render );
+  state.time += clock.getDelta();
+  controls.update();
+  renderer.render( scene, camera );
+};
 
-        //we add the even listener function to the domElement
-        // renderer.domElement.addEventListener( 'mousedown', onMouseDown );
-    }
-
-    function animate() {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-
-    }
-
-    init();
-    animate();
+render();
