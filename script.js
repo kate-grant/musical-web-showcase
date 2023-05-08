@@ -63,7 +63,6 @@ const projects = document.getElementsByClassName("project-card");
 const projectArray = Array.from(projects);
 
 projectArray.forEach((project, i) => {
-  project.classList.add("hide");
   
   window.addEventListener("scroll", () => {
     let scroll = window.scrollY;

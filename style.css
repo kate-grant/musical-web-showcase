@@ -26,10 +26,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure,
+/* article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
-}
+} */
 
 
 #heading-container {
@@ -65,7 +65,9 @@ footer, header, hgroup, menu, nav, section {
 
 #projects-container {
   display: flex;
+  flex-direction: row;
   flex-flow: row-wrap;
+  flex-grow:1;
   top: window.innerHeight;
   width: 100vw;
   z-index: 1;
@@ -73,7 +75,7 @@ footer, header, hgroup, menu, nav, section {
 
 .project-card {
   display: flex;
-  flex-basis: 100%;
+  flex: 1 0 100%;
   position: relative;
   margin: 2rem;
   background-color: #8e85a0;
@@ -84,6 +86,12 @@ footer, header, hgroup, menu, nav, section {
   min-height: fit-content;
   padding: 3rem;
   font-family: 'Roboto Mono', monospace;
+  visibility: none;
+  opacity: 0%;
+  margin-top: 50px;
+  -webkit-transition: opacity 0.5s, margin 0.5s;
+  -o-transition: opacity 0.5s, margin 0.5s;
+  transition: opacity 0.5s, margin 0.5s;
 }
 
 .project-container {
@@ -127,18 +135,11 @@ iframe {
   float: right;
 }
 
-/* .hide {
-  opacity: 0%;
-  margin-top: 50px;
-  -webkit-transition: opacity 0.5s, margin 0.5s;
-  -o-transition: opacity 0.5s, margin 0.5s;
-  transition: opacity 0.5s, margin 0.5s;
-  flex-basis: 100%;
-}
 
 .show {
+  visibility: visible;
   opacity: 100%;
   margin-top: 0;
   transform: translate(0, 20px); transition: all 3s;
   flex-basis: 100%;
-} */
+}
