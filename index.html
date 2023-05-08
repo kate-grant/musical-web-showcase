@@ -96,7 +96,7 @@ var WIDTH = window.innerWidth,
           
 
 
-            vertices.push( distance * Math.sin(theta) * Math.cos(phi), distance * Math.sin(theta) * Math.sin(phi);, distance * Math.cos(theta));
+            vertices.push( distance * Math.sin(theta) * Math.cos(phi), distance * Math.sin(theta) * Math.sin(phi), distance * Math.cos(theta));
 
             geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
         }
