@@ -1,5 +1,7 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+console.log(THREE);
 
 var WIDTH = window.innerWidth,
         HEIGHT = window.innerHeight,
