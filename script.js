@@ -23,6 +23,21 @@ let state = {
   time: 0.0,
 }
 
+const listener = new AudioListener();
+camera.add( listener );
+
+// create a global audio source
+const sound = new Audio( listener );
+
+// load a sound and set it as the Audio object's buffer
+const audioLoader = new AudioLoader();
+audioLoader.load( '', function( buffer ) {
+	sound.setBuffer( buffer );
+	sound.setLoop( true );
+	sound.setVolume( 0.4);
+	sound.play();
+});
+
 let geometry  = new SphereGeometry(2, 45, 45);
 
 let mesh = createSculptureWithGeometry(geometry, spCode(), () => {
