@@ -63,7 +63,14 @@ const projects = document.getElementsByClassName("project-card");
 const projectArray = Array.from(projects);
 
 projectArray.forEach((project, i) => {
+  project.classList.add("hide");
   
+  window.addEventListener("scroll", () => {
+    let scroll = window.scrollY;
+    if (scroll > project.offsetTop - 500) {
+      project.classList.add("show");
+    }
+  });
   
   if (i % 0 === 0) {
     project.classList.add("left");

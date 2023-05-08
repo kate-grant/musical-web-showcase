@@ -2,6 +2,7 @@
 
 :root {
   background-color: #f4f5ed;
+  justify-content: center;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -36,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
   top: 0;
   right: 60vw;
   width: fit-contents;
+  justify-content: center;
 }
 
 #heading-img {
@@ -65,6 +67,7 @@ footer, header, hgroup, menu, nav, section {
   top: window.innerHeight;
   width: 100vw;
   z-index: 50;
+  justify-content: center;
 }
 
 .project-card {
@@ -83,7 +86,7 @@ footer, header, hgroup, menu, nav, section {
 .project-container {
   display: flex;
   flex-direction: row;
-  justify-contents: center;
+  justify-content: center;
 }
 
 .project-info {
@@ -120,3 +123,16 @@ iframe {
   float: right;
 }
 
+.hide {
+  opacity: 0%;
+  margin-top: 50px;
+  -webkit-transition: opacity 0.5s, margin 0.5s;
+  -o-transition: opacity 0.5s, margin 0.5s;
+  transition: opacity 0.5s, margin 0.5s;
+}
+
+.show {
+  opacity: 100%;
+  margin-top: 0;
+  transform: translate(0, 20px); transition: all 3s;
+}
