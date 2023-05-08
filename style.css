@@ -63,17 +63,17 @@ footer, header, hgroup, menu, nav, section {
 }
 
 #projects-container {
-  position: absolute;
+/*   position: absolute; */
   display: flex;
   flex-flow: row-wrap;
-/*   flex-direction: column; */
   top: window.innerHeight;
   width: 100vw;
   z-index: 50;
 }
 
 .project-card {
-  flex: 1,
+  display: flex;
+  flex-basis: 100%;
   position: relative;
   margin: 2rem;
   background-color: #b9a2c8;
@@ -110,11 +110,6 @@ footer, header, hgroup, menu, nav, section {
   font-size: 28px;
 }
 
-.project-spacer {
-  display: block;
-  width: 100vw;
-}
-
 canvas {
   z-index: 10;
 }
@@ -131,16 +126,18 @@ iframe {
   float: right;
 }
 
-.hide {
+/* .hide {
   opacity: 0%;
   margin-top: 50px;
   -webkit-transition: opacity 0.5s, margin 0.5s;
   -o-transition: opacity 0.5s, margin 0.5s;
   transition: opacity 0.5s, margin 0.5s;
+  flex-basis: 100%;
 }
 
 .show {
   opacity: 100%;
   margin-top: 0;
   transform: translate(0, 20px); transition: all 3s;
-}
+  flex-basis: 100%;
+} */
