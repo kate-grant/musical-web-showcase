@@ -66,7 +66,31 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .project-card {
-  
+  position: relative;
+  margin: 2rem;
+  background-color: #c8a2c8;
+  border: none;
+  border-radius: 50px;
+  opacity: 80%;
+  width: 40vw;
+  min-height: fit-content;
+  padding: 1.5 rem;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  justify-contents: center;
+}
+
+.project-info {
+  margin: 1.5 rem;
+  float: left;
+}
+
+.project-media {
+  margin-right: 1.5 rem;
+  float: right;
 }
 
 canvas {
