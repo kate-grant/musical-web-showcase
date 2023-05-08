@@ -69,13 +69,11 @@ let onWindowResize = () => {
 window.addEventListener( 'resize', onWindowResize );
 
 let controls = new OrbitControls( camera, renderer.domElement, {
-  noZoom: true,
+  enableZoom: false,
   enableDamping : true,
   dampingFactor : 0.25,
-  zoomSpeed : 0.0,
   rotateSpeed : 0.5
 } );
-
 
 
 let render = () => {
@@ -92,6 +90,7 @@ let render = () => {
 
 render();
 
+const projectSection = document.getElementsByClassName("project-container");
 const projects = document.getElementsByClassName("project-card");
 const projectArray = Array.from(projects);
 
@@ -111,4 +110,10 @@ projectArray.forEach((project, i) => {
     project.style.backgroundColor = "#85a09e";
   }
   
-})
+});
+
+window.addEventListener( 'scroll', () => {
+  const curr = projectSection.getBoundingClientRect();
+  
+  projectSection.style.top = curr.
+});
