@@ -144,3 +144,9 @@ iframe {
   transform: translate(0, 20px); transition: all 3s;
   flex-basis: 100%;
 }
+
+#play-button {
+  width: 30vw;
+  height: 4rem;
+  z-index: 110;
+}

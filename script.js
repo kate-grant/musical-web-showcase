@@ -1,6 +1,6 @@
 // Based on Shader Park tutorial https://glitch.com/~starter-template-audio-reactive-shader-three-js-shader-park
 
-
+import { AudioListener, Audio, AudioLoader, AudioAnalyser, Clock } from 'three';
 import { Scene, SphereGeometry, Vector3, PerspectiveCamera, WebGLRenderer, Color, MeshBasicMaterial, Mesh, Clock } from 'three';
 import { OrbitControls } from 'https://unpkg.com/three@0.146/examples/jsm/controls/OrbitControls.js';
 import { createSculptureWithGeometry } from 'https://unpkg.com/shader-park-core/dist/shader-park-core.esm.js';
@@ -17,11 +17,14 @@ renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setClearColor( new Color(1, 1, 1), 0);
 document.body.appendChild( renderer.domElement );
 
-let clock = new Clock();
+let clockTimer = new Clock();
 
 let state = {
   time: 0.0,
+  audio: 0.0
 }
+
+let button = document.getElementById('play-button');
 
 const listener = new AudioListener();
 camera.add( listener );
@@ -31,11 +34,14 @@ const sound = new Audio( listener );
 
 // load a sound and set it as the Audio object's buffer
 const audioLoader = new AudioLoader();
-audioLoader.load( '', function( buffer ) {
+audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/irreducible-111374.mp3?v=1683555316658', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( true );
 	sound.setVolume( 0.4);
-	sound.play();
+	button.addEventListener('pointerdown', () => {
+    sound.play();
+    button.style.display = 'none';
+  }, false);
 });
 
 let geometry  = new SphereGeometry(2, 45, 45);
@@ -43,6 +49,7 @@ let geometry  = new SphereGeometry(2, 45, 45);
 let mesh = createSculptureWithGeometry(geometry, spCode(), () => {
   return {
     time: state.time,
+    audio: state.audio,
   }
 })
 
@@ -67,7 +74,7 @@ let controls = new OrbitControls( camera, renderer.domElement, {
 
 let render = () => {
   requestAnimationFrame( render );
-  state.time = state.time +clock.getDelta();
+  state.time = state.time +clockTimer.getDelta();
   controls.update();
   renderer.render( scene, camera );
 };
