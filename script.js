@@ -80,6 +80,7 @@ let render = () => {
   if(analyser) {
     state.currAudio += Math.pow((analyser.getFrequencyData()[2] / 255) * .81, 8) + clock.getDelta() * .5;
     state.audio = .2 * state.currAudio + .8 * state.audio;
+    
   }
   controls.update();
   renderer.render( scene, camera );
