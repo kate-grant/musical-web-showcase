@@ -1,3 +1,6 @@
+// Based on Shader Park tutorial https://glitch.com/~starter-template-audio-reactive-shader-three-js-shader-park
+
+
 import { Scene, SphereGeometry, Vector3, PerspectiveCamera, WebGLRenderer, Color, MeshBasicMaterial, Mesh, Clock } from 'three';
 import { OrbitControls } from 'https://unpkg.com/three@0.146/examples/jsm/controls/OrbitControls.js';
 import { createSculptureWithGeometry } from 'https://unpkg.com/shader-park-core/dist/shader-park-core.esm.js';
@@ -16,38 +19,19 @@ document.body.appendChild( renderer.domElement );
 
 let clock = new Clock();
 
-let button = document.querySelector('.button');
-button.innerHTML = "Loading Audio..."
-button.style.display = 'none';
-
 let state = {
-  mouse : new Vector3(),
-  currMouse : new Vector3(),
-  // audio: 0.0,
-  // currAudio: 0.0,
   time: 0.0,
 }
 
-// create our geometry and material
 let geometry  = new SphereGeometry(2, 45, 45);
 
 let mesh = createSculptureWithGeometry(geometry, spCode(), () => {
   return {
     time: state.time,
-    mouse: state.mouse,
-    // audio: state.audio,
   }
 })
 
 scene.add(mesh);
-
-// Add mouse controlls
-let controls = new OrbitControls( camera, renderer.domElement, {
-  enableDamping : true,
-  dampingFactor : 0.25,
-  zoomSpeed : 0.0,
-  rotateSpeed : 0.5
-} );
 
 let onWindowResize = () => {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -57,10 +41,18 @@ let onWindowResize = () => {
 
 window.addEventListener( 'resize', onWindowResize );
 
+let controls = new OrbitControls( camera, renderer.domElement, {
+  enableDamping : true,
+  dampingFactor : 0.25,
+  zoomSpeed : 0.0,
+  rotateSpeed : 0.5
+} );
+
+
 
 let render = () => {
   requestAnimationFrame( render );
-  state.time += clock.getDelta();
+  state.time = state.time +clock.getDelta();
   controls.update();
   renderer.render( scene, camera );
 };
