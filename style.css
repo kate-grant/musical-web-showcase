@@ -64,7 +64,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 #projects-container {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   flex-flow: row-wrap;
   flex-grow:1;
@@ -75,7 +75,7 @@ footer, header, hgroup, menu, nav, section {
 
 .project-card {
   display: flex;
-  flex: 1 0 100%;
+  flex-basis: 100%;
   position: relative;
   margin: 2rem;
   background-color: #8e85a0;

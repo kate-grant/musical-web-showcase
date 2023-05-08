@@ -76,4 +76,6 @@ projectArray.forEach((project, i) => {
   } else {
     project.classList.add("right");
   }
+  
+  
 })
