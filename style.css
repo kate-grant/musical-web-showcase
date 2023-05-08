@@ -64,13 +64,16 @@ footer, header, hgroup, menu, nav, section {
 
 #projects-container {
   position: absolute;
+  display: flex;
+  flex-flow: row-wrap;
+/*   flex-direction: column; */
   top: window.innerHeight;
   width: 100vw;
   z-index: 50;
-  justify-content: center;
 }
 
 .project-card {
+  flex: 1,
   position: relative;
   margin: 2rem;
   background-color: #b9a2c8;
@@ -105,6 +108,11 @@ footer, header, hgroup, menu, nav, section {
 
 .artist-name {
   font-size: 28px;
+}
+
+.project-spacer {
+  display: block;
+  width: 100vw;
 }
 
 canvas {
