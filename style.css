@@ -58,6 +58,17 @@ footer, header, hgroup, menu, nav, section {
 
 }
 
+#projects-container {
+  position: absolute;
+  top: window.innerHeight;
+  width: 100vw;
+  z-index: 50;
+}
+
+.project-card {
+  
+}
+
 canvas {
   z-index: 10;
 }
