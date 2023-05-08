@@ -71,11 +71,10 @@ projectArray.forEach((project, i) => {
     }
   });
   
-  if (i % 0 === 0) {
+  if (i % 2 === 0) {
     project.classList.add("left");
   } else {
     project.classList.add("right");
   }
-  
   
 })

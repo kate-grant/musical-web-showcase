@@ -71,6 +71,7 @@ footer, header, hgroup, menu, nav, section {
   top: window.innerHeight;
   width: 100vw;
   z-index: 1;
+  justify-content: center;
 }
 
 .project-card {
@@ -82,7 +83,7 @@ footer, header, hgroup, menu, nav, section {
   border: none;
   border-radius: 50px;
   opacity: 80%;
-  width: 40vw;
+  width: 80vw;
   min-height: fit-content;
   padding: 3rem;
   font-family: 'Roboto Mono', monospace;
