@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital@0;1&display=swap');
+
 :root {
   background-color: #f4f5ed;
 }
@@ -68,13 +70,14 @@ footer, header, hgroup, menu, nav, section {
 .project-card {
   position: relative;
   margin: 2rem;
-  background-color: #c8a2c8;
+  background-color: #b9a2c8;
   border: none;
   border-radius: 50px;
   opacity: 80%;
   width: 40vw;
   min-height: fit-content;
-  padding: 1.5 rem;
+  padding: 3rem;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .project-container {
@@ -93,7 +96,19 @@ footer, header, hgroup, menu, nav, section {
   float: right;
 }
 
+.project-title {
+  font-size: 36px;
+}
+
+.artist-name {
+  font-size: 28px;
+}
+
 canvas {
   z-index: 10;
+}
+
+iframe {
+  float: right;
 }
 
