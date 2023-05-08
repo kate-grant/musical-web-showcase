@@ -43,8 +43,8 @@ footer, header, hgroup, menu, nav, section {
 #heading-img {
   position: absolute;
   top: 0;
-/*   float: right; */
-  width: 60vw;
+  margin: 1rem;
+  width: 55vw;
 }
 
 .containter {
@@ -52,6 +52,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 #spiral-container {
+  top: 0;
   z-index: 101;
   fill: none;
   background-color: transparent;
@@ -63,12 +64,11 @@ footer, header, hgroup, menu, nav, section {
 }
 
 #projects-container {
-/*   position: absolute; */
   display: flex;
   flex-flow: row-wrap;
   top: window.innerHeight;
   width: 100vw;
-  z-index: 50;
+  z-index: 1;
 }
 
 .project-card {
@@ -76,7 +76,7 @@ footer, header, hgroup, menu, nav, section {
   flex-basis: 100%;
   position: relative;
   margin: 2rem;
-  background-color: #b9a2c8;
+  background-color: #8e85a0;
   border: none;
   border-radius: 50px;
   opacity: 80%;
@@ -111,6 +111,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 canvas {
+  top: window.innerHeight;
   z-index: 10;
 }
 
