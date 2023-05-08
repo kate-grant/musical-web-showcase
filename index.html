@@ -30,8 +30,8 @@
 <script type="importmap">
   {
     "imports": {
-      "three": "https://unpkg.com/three@<version>/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+      "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
     }
   }
 </script>
@@ -79,14 +79,14 @@ var WIDTH = window.innerWidth,
 
         /**/
         var distance = 100;    
-        var geometry = new THREE.Geometry();
+        var geometry = new THREE.BufferGeometry();
 
         for (var i = 0; i < 1000; i++) {
 
             var vertex = new THREE.Vector3();
             
-            var theta = THREE.Math.randFloatSpread(360);
-            var phi = THREE.Math.randFloatSpread(360);
+            var theta = THREE.MathUtils.randFloatSpread(360);
+            var phi = THREE.MathUtils.randFloatSpread(360);
             
             vertex.x = distance * Math.sin(theta) * Math.cos(phi);
             vertex.y = distance * Math.sin(theta) * Math.sin(phi);
