@@ -72,6 +72,7 @@ footer, header, hgroup, menu, nav, section {
   width: 100vw;
   z-index: 1;
   justify-content: center;
+  z-index: 150;
 }
 
 .project-card {
