@@ -58,3 +58,16 @@ let render = () => {
 };
 
 render();
+
+const projects = document.getElementsByClassName("project-card");
+const projectArray = Array.from(projects);
+
+projectArray.forEach((project, i) => {
+  
+  
+  if (i % 0 === 0) {
+    project.classList.add("left");
+  } else {
+    project.classList.add("right");
+  }
+})
