@@ -21,7 +21,8 @@ let clock = new Clock();
 
 let state = {
   time: 0.0,
-  audio: 0.0
+  audio: 0.0,
+  currAudio: 0.0,
 }
 
 let button = document.getElementById('play-button');
