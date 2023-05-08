@@ -69,6 +69,7 @@ let onWindowResize = () => {
 window.addEventListener( 'resize', onWindowResize );
 
 let controls = new OrbitControls( camera, renderer.domElement, {
+  noZoom: true,
   enableDamping : true,
   dampingFactor : 0.25,
   zoomSpeed : 0.0,
