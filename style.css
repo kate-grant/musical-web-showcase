@@ -1,10 +1,16 @@
+:root {
+  background-color: #f4f5ed;
+}
+
 .containter {
   z-index: 100;
 }
 
 #spiral-container {
+  position: absolute;
   z-index: 101;
-
+  fill: none;
+  background-color: transparent;
 }
 
 #spiral-container text{
@@ -12,3 +18,8 @@
 
 }
 
+canvas {
+  position: absolute;
+  top: window.innerHeight;
+  z-index: 10;
+}
