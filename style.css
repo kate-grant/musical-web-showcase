@@ -1,0 +1,14 @@
+.containter {
+  z-index: 100;
+}
+
+#spiral-container {
+  z-index: 101;
+
+}
+
+#spiral-container text{
+  fill: black;
+
+}
+
