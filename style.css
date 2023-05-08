@@ -2,6 +2,21 @@
   background-color: #f4f5ed;
 }
 
+
+#heading-container {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  width: fit-contents;
+}
+
+#heading-img {
+  position: absolute;
+  top: 0;
+  float: right;
+  width: 60vw;
+}
+
 .containter {
   z-index: 100;
 }
@@ -20,3 +35,4 @@
 canvas {
   z-index: 10;
 }
+
