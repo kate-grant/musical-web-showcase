@@ -1,7 +1,7 @@
 // Based on Shader Park tutorial https://glitch.com/~starter-template-audio-reactive-shader-three-js-shader-park
 
 import { AudioListener, Audio, AudioLoader, AudioAnalyser, Clock } from 'three';
-import { Scene, SphereGeometry, Vector3, PerspectiveCamera, WebGLRenderer, Color, MeshBasicMaterial, Mesh, Clock } from 'three';
+import { Scene, SphereGeometry, Vector3, PerspectiveCamera, WebGLRenderer, Color, MeshBasicMaterial, Mesh} from 'three';
 import { OrbitControls } from 'https://unpkg.com/three@0.146/examples/jsm/controls/OrbitControls.js';
 import { createSculptureWithGeometry } from 'https://unpkg.com/shader-park-core/dist/shader-park-core.esm.js';
 import { spCode } from '/sp-code.js';
@@ -17,7 +17,7 @@ renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setClearColor( new Color(1, 1, 1), 0);
 document.body.appendChild( renderer.domElement );
 
-let clockTimer = new Clock();
+let clock = new Clock();
 
 let state = {
   time: 0.0,
@@ -43,6 +43,8 @@ audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fc
     button.style.display = 'none';
   }, false);
 });
+
+const analyser = new AudioAnalyser( sound, 32 );
 
 let geometry  = new SphereGeometry(2, 45, 45);
 
@@ -74,7 +76,11 @@ let controls = new OrbitControls( camera, renderer.domElement, {
 
 let render = () => {
   requestAnimationFrame( render );
-  state.time = state.time +clockTimer.getDelta();
+  state.time = state.time +clock.getDelta();
+  if(analyser) {
+    state.currAudio += Math.pow((analyser.getFrequencyData()[2] / 255) * .81, 8) + clock.getDelta() * .5;
+    state.audio = .2 * state.currAudio + .8 * state.audio;
+  }
   controls.update();
   renderer.render( scene, camera );
 };
