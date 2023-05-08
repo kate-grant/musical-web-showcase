@@ -112,8 +112,8 @@ projectArray.forEach((project, i) => {
   
 });
 
-window.addEventListener( 'scroll', () => {
+canvas.addEventListener( 'scroll', () => {
   const curr = projectSection.getBoundingClientRect();
   
-  projectSection.style.top = curr.
+  projectSection.style.top = curr.y - 2;
 });
