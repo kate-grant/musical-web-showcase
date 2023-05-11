@@ -65,6 +65,10 @@ footer, header, hgroup, menu, nav, section {
 
 }
 
+img {
+  z-index: 150;
+}
+
 #projects-container {
   display: flex !important;
   flex-direction: row;
