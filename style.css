@@ -49,6 +49,7 @@ footer, header, hgroup, menu, nav, section {
   top: 0;
   margin: 1rem;
   width: 55vw;
+  mix-blend-mode: difference;
 }
 
 .containter {
@@ -75,6 +76,7 @@ footer, header, hgroup, menu, nav, section {
 .floating {
   visibility: hidden;
   z-index: 150;
+  mix-blend-mode: difference;
 }
 
 /* #projects-container {

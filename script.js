@@ -135,3 +135,7 @@ canvas.addEventListener( 'scroll', () => {
   
   projectSection.style.top = curr.y - 2;
 });
+
+const spiral = document.getElementById("spiral");
+
+spiral.setAttribute("viewBow", `0 0 ${window.innerHeight} ${window.innerHeight}`);
