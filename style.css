@@ -69,7 +69,7 @@ img {
   z-index: 150;
 }
 
-#projects-container {
+/* #projects-container {
   display: flex !important;
   flex-direction: row;
   flex-flow: row-wrap;
@@ -100,9 +100,9 @@ img {
   -webkit-transition: opacity 0.5s, margin 0.5s;
   -o-transition: opacity 0.5s, margin 0.5s;
   transition: opacity 0.5s, margin 0.5s;
-}
+} */
 
-.project-container {
+/* .project-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -124,7 +124,7 @@ img {
 
 .artist-name {
   font-size: 28px;
-}
+} */
 
 #canvas {
   position: fixed;
@@ -134,7 +134,7 @@ img {
   justify-self: center;
 }
 
-iframe {
+/* iframe {
   float: right;
 }
 
@@ -154,7 +154,7 @@ iframe {
   transform: translate(0, 20px); transition: all 3s;
   flex-basis: 100%;
   z-index: 200;
-}
+} */
 
 #play-button {
   width: 30vw;
