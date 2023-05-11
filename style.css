@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 
 #heading-container {
   position: fixed;
+  display: block;
   top: 0;
   right: 60vw;
   width: fit-content;
@@ -50,19 +51,21 @@ footer, header, hgroup, menu, nav, section {
   margin: 1rem;
   width: 55vw;
   mix-blend-mode: difference;
+  animation: 3s infinite alternate bounce;
 }
 
 .containter {
+  display: block;
+  top: 15vh;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 75vh;
   z-index: 100;
   overflow: hidden;
-  justify-content: center;
+  align-content: center;
 }
 
 #spiral-container {
-  top: 400px;
   z-index: 101;
   fill: none;
   background-color: transparent;
@@ -173,11 +176,13 @@ footer, header, hgroup, menu, nav, section {
   z-index: 250;
 }
 
-@keyframes opac {
+@keyframes bounce {
   from {
-    opacity: 0;
+    top: 0;
+    mix-blend-mode: difference;
   }
   to {
-    opacity: 1;
+    transform: translate(2px, 8px);
+    mix-blend-mode: screen;
   }
 }
