@@ -56,13 +56,12 @@ footer, header, hgroup, menu, nav, section {
 
 .containter {
   display: block;
-  top: 15vh;
   display: flex;
   width: 100vw;
   height: 75vh;
   z-index: 100;
   overflow: hidden;
-  align-content: center;
+  justify-content: center;
 }
 
 #spiral-container {
@@ -179,10 +178,8 @@ footer, header, hgroup, menu, nav, section {
 @keyframes bounce {
   from {
     top: 0;
-    mix-blend-mode: difference;
   }
   to {
     transform: translate(2px, 8px);
-    mix-blend-mode: screen;
   }
 }
