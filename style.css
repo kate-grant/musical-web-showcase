@@ -163,6 +163,7 @@ footer, header, hgroup, menu, nav, section {
 } */
 
 #play-button {
+  position: fixed;
   width: 30vw;
   height: 4rem;
   z-index: 110;

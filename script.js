@@ -8,15 +8,12 @@ import { spCode } from '/sp-code.js';
 
 const floating = document.getElementsByClassName("floating");
 const floatingArr = Array.from(floating);
-let count = 3;
 
-floating.forEach((img, i) => {
-  if (i % 2 === 1) {
-    count + 3;
-  }
-  
-  
-  
+floatingArr.forEach((img, i) => {
+  setTimeout(function(){
+    console.log('foobar');
+    img.style.visibility = "visible";
+  }, i * 3000);  
 })
 
 let scene = new Scene();
