@@ -50,130 +50,50 @@
             <animate attributename="startOffset" from="0%" to="200%" dur="100s" repeatcount="indefinite"/>
           </textpath>
         </text>
+        
         <image id="sqi" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="-20px">
           <animatemotion id="sqi-ani" xlink:href="#sqi" dur="80s" repeatcount="indefinite">
             <mpath xlink:href="#curve"/>
           </animatemotion>
           <animate attributetype="CSS" attributename="opacity"
-             from="1" to="0" dur="4s" begin="4s;sqi-ani.begin+76s" />
+             from="1" to="0" dur="4s" begin="sqi-ani.begin+76s" />
         </image>
                 <image id="a" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
           <animatemotion id="a-ani" xlink:href="#a" dur="55s" repeatcount="indefinite">
             <mpath xlink:href="#curve"/>
           </animatemotion>
                   <animate attributetype="CSS" attributename="opacity"
-             from="1" to="0" dur="4s" begin="4s;a-ani.begin-51s" />
+             from="1" to="0" dur="4s" begin="a-ani.begin+51s" />
         </image>
-<!--                 <image id="b" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="20px">
-          <animatemotion xlink:href="#b" dur="90s" repeatcount="indefinite">
+                <image id="b" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="-20px">
+          <animatemotion id="b-ani" xlink:href="#b" dur="80s" repeatcount="indefinite" begin="sqi-ani.begin+3s">
             <mpath xlink:href="#curve"/>
           </animatemotion>
+          <animate attributetype="CSS" attributename="opacity"
+             from="1" to="0" dur="4s" begin="b-ani.begin+76s" />
         </image>
-                <image id="c" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="-20" y="20px">
-          <animatemotion xlink:href="#c" dur="120s" repeatcount="indefinite">
+                <image id="c" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
+          <animatemotion id="c-ani" xlink:href="#c" dur="55s" repeatcount="indefinite" begin="a-ani.begin+3s">
             <mpath xlink:href="#curve"/>
           </animatemotion>
+                  <animate attributetype="CSS" attributename="opacity"
+             from="1" to="0" dur="4s" begin="c-ani.begin+51s" />
         </image>
-                <image id="d" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="-40">
-          <animatemotion xlink:href="#d" dur="200s" repeatcount="indefinite">
+                <image id="d" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="-20px">
+          <animatemotion id="d-ani" xlink:href="#d" dur="80s" repeatcount="indefinite" begin="sqi-ani.begin+6s">
             <mpath xlink:href="#curve"/>
           </animatemotion>
+          <animate attributetype="CSS" attributename="opacity"
+             from="1" to="0" dur="4s" begin="d-ani.begin+76s" />
         </image>
                 <image id="e" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
-          <animatemotion xlink:href="#e" dur="230s" repeatcount="indefinite">
+          <animatemotion id="e-ani" xlink:href="#e" dur="55s" repeatcount="indefinite" begin="a-ani.begin+6s">
             <mpath xlink:href="#curve"/>
           </animatemotion>
+                  <animate attributetype="CSS" attributename="opacity"
+             from="1" to="0" dur="4s" begin="e-ani.begin+51s" />
         </image>
-                <image id="f" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
-          <animatemotion xlink:href="#f" dur="180s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="g" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
-          <animatemotion xlink:href="#g" dur="210s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="h" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
-          <animatemotion xlink:href="#h" dur="88s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="i" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="-40">
-          <animatemotion xlink:href="#i" dur="150s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="j" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="-20px">
-          <animatemotion xlink:href="#j" dur="86s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="k" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="20">
-          <animatemotion xlink:href="#k" dur="130s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="l" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="-10px">
-          <animatemotion xlink:href="#l" dur="110s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="m" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="-40">
-          <animatemotion xlink:href="#m" dur="125s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="n" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="20">
-          <animatemotion xlink:href="#n" dur="165s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="o" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
-          <animatemotion xlink:href="#o" dur="92s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="p" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="-20px">
-          <animatemotion xlink:href="#p" dur="65s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="q" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="120px" height="130px" x="20">
-          <animatemotion xlink:href="#q" dur="70s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="r" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="20px">
-          <animatemotion xlink:href="#r" dur="204s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="s" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="-40">
-          <animatemotion xlink:href="#s" dur="72s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="w" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" x="40">
-          <animatemotion xlink:href="#w" dur="217s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="t" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="90px" height="110px" x="-30" y="10px">
-          <animatemotion xlink:href="#t" dur="61s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="u" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="102px" height="123px" y="-20px">
-          <animatemotion xlink:href="#u" dur="112s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image>
-                <image id="v" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="99px" height="120px" y="30px">
-          <animatemotion xlink:href="#v" dur="170s" repeatcount="indefinite">
-            <mpath xlink:href="#curve"/>
-          </animatemotion>
-        </image> -->
+        
       </svg>
     </div>
       
