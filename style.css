@@ -29,11 +29,6 @@ time, mark, audio, video {
   overflow: hidden;
 }
 
-/* article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-} */
-
 
 #heading-container {
   position: fixed;
@@ -57,7 +52,7 @@ footer, header, hgroup, menu, nav, section {
   position: absolute;
   top: 0.3rem;
   margin: 1rem;
-  width: 55vw;
+  width: 56vw;
   animation: 3s infinite alternate min;
 }
 
@@ -201,8 +196,10 @@ footer, header, hgroup, menu, nav, section {
 @keyframes min {
   from {
     transform: scale(0.97);
+    opacity: 0.8;
   }
   to {
     transform: scale(1);
+    opacity: 0.3;
   }
 }
