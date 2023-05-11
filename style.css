@@ -37,13 +37,11 @@ footer, header, hgroup, menu, nav, section {
 
 #heading-container {
   position: fixed;
-/*   display: block; */
   top: 0;
   right: 60vw;
   width: fit-content;
   justify-content: center;
   overflow: visible;
-  animation: 1s infinite alternate bounce;
 }
 
 #heading-img {
@@ -55,16 +53,16 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .containter {
+  display: flex;
   width: 100vw;
   height: 100vh;
   z-index: 100;
   overflow: hidden;
+  justify-content: center;
 }
 
 #spiral-container {
-  top: ;
-  width: 120vw;
-  height: 120vh;
+  top: 400px;
   z-index: 101;
   fill: none;
   background-color: transparent;
@@ -175,11 +173,11 @@ footer, header, hgroup, menu, nav, section {
   z-index: 250;
 }
 
-@keyframes bounce {
+@keyframes opac {
   from {
-    top: 0;
+    opacity: 0;
   }
   to {
-    top: 10px;
+    opacity: 1;
   }
 }
