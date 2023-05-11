@@ -55,14 +55,16 @@
             <mpath xlink:href="#curve"/>
           </animatemotion>
           <animate attributetype="CSS" attributename="opacity"
-             from="1" to="0" dur="3s" begin="sqi-ani.durs;op.end+3s" />
+             from="1" to="0" dur="4s" begin="4s;sqi-ani.begin+76s" />
         </image>
                 <image id="a" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
-          <animatemotion xlink:href="#a" dur="55s" repeatcount="indefinite">
+          <animatemotion id="a-ani" xlink:href="#a" dur="55s" repeatcount="indefinite">
             <mpath xlink:href="#curve"/>
           </animatemotion>
+                  <animate attributetype="CSS" attributename="opacity"
+             from="1" to="0" dur="4s" begin="4s;a-ani.begin-51s" />
         </image>
-                <image id="b" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="20px">
+<!--                 <image id="b" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="20px">
           <animatemotion xlink:href="#b" dur="90s" repeatcount="indefinite">
             <mpath xlink:href="#curve"/>
           </animatemotion>
@@ -171,7 +173,7 @@
           <animatemotion xlink:href="#v" dur="170s" repeatcount="indefinite">
             <mpath xlink:href="#curve"/>
           </animatemotion>
-        </image>
+        </image> -->
       </svg>
     </div>
       
