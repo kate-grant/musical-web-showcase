@@ -50,8 +50,15 @@ footer, header, hgroup, menu, nav, section {
   top: 0;
   margin: 1rem;
   width: 55vw;
-  mix-blend-mode: difference;
   animation: 3s infinite alternate bounce;
+}
+
+#shadow {
+  position: absolute;
+  top: 0.3rem;
+  margin: 1rem;
+  width: 55vw;
+  animation: 3s infinite alternate min;
 }
 
 .containter {
@@ -188,5 +195,14 @@ footer, header, hgroup, menu, nav, section {
   }
   to {
     transform: translate(2px, 8px);
+  }
+}
+
+@keyframes min {
+  from {
+    transform: scale(0.97);
+  }
+  to {
+    transform: scale(1);
   }
 }
