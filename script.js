@@ -6,6 +6,18 @@ import { OrbitControls } from 'https://unpkg.com/three@0.146/examples/jsm/contro
 import { createSculptureWithGeometry } from 'https://unpkg.com/shader-park-core/dist/shader-park-core.esm.js';
 import { spCode } from '/sp-code.js';
 
+const floating = document.getElementsByClassName("floating");
+const floatingArr = Array.from(floating);
+let count = 3;
+
+floating.forEach((img, i) => {
+  if (i % 2 === 1) {
+    count + 3;
+  }
+  
+  
+  
+})
 
 let scene = new Scene();
 

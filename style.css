@@ -39,8 +39,9 @@ footer, header, hgroup, menu, nav, section {
   position: fixed;
   top: 0;
   right: 60vw;
-  width: fit-contents;
+  width: fit-content;
   justify-content: center;
+  overflow: visible;
 }
 
 #heading-img {
@@ -69,7 +70,8 @@ footer, header, hgroup, menu, nav, section {
 
 }
 
-image {
+.floating {
+  visibility: hidden;
   z-index: 150;
 }
 
@@ -168,9 +170,9 @@ image {
 
 @keyframes opac {
   from {
-    opacity: 0%
+    opacity: 0;
   }
   to {
-    opacity: 100%
+    opacity: 1;
   }
 }
