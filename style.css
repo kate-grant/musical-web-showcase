@@ -166,7 +166,7 @@ footer, header, hgroup, menu, nav, section {
   position: fixed;
   width: 30vw;
   height: 4rem;
-  z-index: 110;
+  z-index: 250;
 }
 
 @keyframes opac {

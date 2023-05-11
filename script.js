@@ -35,6 +35,7 @@ let state = {
   time: 0.0,
   audio: 0.0,
   currAudio: 0.0,
+  isPlaying: false,
 }
 
 let button = document.getElementById('play-button');
@@ -52,8 +53,15 @@ audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fc
 	sound.setLoop( true );
 	sound.setVolume( 0.4);
 	button.addEventListener('pointerdown', () => {
-    sound.play();
-    button.style.display = 'none';
+    if (sound.isPlaying) {
+      sound.pause();
+      button.innerHTML = 'START';
+      
+    } else {
+      sound.play();
+      button.innerHTML = 'STOP';
+    }
+    
   }, false);
 });
 
