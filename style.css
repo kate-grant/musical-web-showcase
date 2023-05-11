@@ -186,19 +186,23 @@ time, mark, audio, video {
 
 #play-button {
   position: absolute;
-  background-image: url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/btn_1_play_softer.png?v=1683790463332);
+  background-image: url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/btn_1_goo.png?v=1683791123149);
   background-size: contain;
   position: fixed;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 18vw;
-  height: 12vh;
+  width: 25vw;
+  height: 29vh;
   border: none;
   bottom: 3rem;
   left: 3rem;
   z-index: 250;
   background-color: transparent;
   transform: rotate(15deg)
+}
+
+#play-button:hover {
+  cursor: pointer;
 }
 
 

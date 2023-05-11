@@ -53,12 +53,12 @@ audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fc
 	button.addEventListener('pointerdown', () => {
     if (sound.isPlaying) {
       sound.pause();
-      button.innerHTML = 'START';
+      // button.innerHTML = 'START';
       state.audio = 0.0;
       state.currAudio = 0.0;
     } else {
       sound.play();
-      button.innerHTML = 'STOP';
+      // button.innerHTML = 'STOP';
     }
     
   }, false);
