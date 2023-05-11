@@ -65,8 +65,10 @@ footer, header, hgroup, menu, nav, section {
 
 }
 
-img {
+image {
   z-index: 150;
+  opacity: 0%;
+/*   animation: opac 40s infinite; */
 }
 
 /* #projects-container {
@@ -160,4 +162,13 @@ img {
   width: 30vw;
   height: 4rem;
   z-index: 110;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0%
+  }
+  to {
+    opacity: 100%
+  }
 }

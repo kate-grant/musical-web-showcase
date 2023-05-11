@@ -51,10 +51,11 @@
           </textpath>
         </text>
         <image id="sqi" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px" y="-20px">
-          <animatemotion xlink:href="#sqi" dur="80s" repeatcount="indefinite">
+          <animatemotion id="sqi-ani" xlink:href="#sqi" dur="80s" repeatcount="indefinite">
             <mpath xlink:href="#curve"/>
           </animatemotion>
-          <animate attributename="opacity" from="%" to="200%" dur="100s" repeatcount="indefinite"/>
+          <animate attributetype="CSS" attributename="opacity"
+             from="1" to="0" dur="3s" begin="sqi-ani.durs;op.end+3s" />
         </image>
                 <image id="a" xlink:href="https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/poem_bg_smol.png?v=1683767894398" width="100px" height="122px">
           <animatemotion xlink:href="#a" dur="55s" repeatcount="indefinite">
