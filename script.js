@@ -60,7 +60,7 @@ audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fc
       state.currAudio = 0.0;
     } else {
       sound.play();
-      button.style.backgroundImage = "url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/pause_17.png?v=1683803891365)";
+      button.style.backgroundImage = "url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/pause_22.png?v=1683804603165)";
       // button.innerHTML = 'STOP';
       button.alt = 'pause';
     }
