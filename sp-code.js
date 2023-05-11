@@ -1,8 +1,8 @@
 export function spCode() {
   return `
+    let isPlaying = input();
     let audio = input();
     
-    console.log(audio)
     let s = getSpace();
     let r = getRayDirection();
 

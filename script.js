@@ -11,7 +11,6 @@ const floatingArr = Array.from(floating);
 
 floatingArr.forEach((img, i) => {
   setTimeout(function(){
-    console.log('foobar');
     img.style.visibility = "visible";
   }, i * 3000);  
 })
@@ -56,10 +55,11 @@ audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fc
     if (sound.isPlaying) {
       sound.pause();
       button.innerHTML = 'START';
-      
+      state.isPlaying = true;
     } else {
       sound.play();
       button.innerHTML = 'STOP';
+      state.isPlaying = false;
     }
     
   }, false);
@@ -73,6 +73,7 @@ let mesh = createSculptureWithGeometry(geometry, spCode(), () => {
   return {
     time: state.time,
     audio: state.audio,
+    isPlaying: state.isPlaying,
   }
 })
 
