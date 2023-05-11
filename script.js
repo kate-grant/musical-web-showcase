@@ -14,7 +14,7 @@ camera.position.z = 5.5;
 const canvas = document.getElementById("canvas");
 
 let renderer = new WebGLRenderer({ canvas: canvas, antialias: true, transparent: true });
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( window.innerWidth, window.innerHeight);
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setClearColor( new Color(1, 1, 1), 0);
 // document.body.appendChild( renderer.domElement );
