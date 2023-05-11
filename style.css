@@ -37,11 +37,13 @@ footer, header, hgroup, menu, nav, section {
 
 #heading-container {
   position: fixed;
+/*   display: block; */
   top: 0;
   right: 60vw;
   width: fit-content;
   justify-content: center;
   overflow: visible;
+  animation: 1s infinite alternate bounce;
 }
 
 #heading-img {
@@ -60,7 +62,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 #spiral-container {
-  top: 0;
+  top: ;
   width: 120vw;
   height: 120vh;
   z-index: 101;
@@ -173,11 +175,11 @@ footer, header, hgroup, menu, nav, section {
   z-index: 250;
 }
 
-@keyframes opac {
+@keyframes bounce {
   from {
-    opacity: 0;
+    top: 0;
   }
   to {
-    opacity: 1;
+    top: 10px;
   }
 }
