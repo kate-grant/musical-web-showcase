@@ -6,9 +6,6 @@ import { OrbitControls } from 'https://unpkg.com/three@0.146/examples/jsm/contro
 import { createSculptureWithGeometry } from 'https://unpkg.com/shader-park-core/dist/shader-park-core.esm.js';
 import { spCode } from '/sp-code.js';
 
-// const spiral = document.getElementById("spiral");
-
-// spiral.style.viewbox = "0 0 window.innerWidth window.innerHeight";
 
 let scene = new Scene();
 

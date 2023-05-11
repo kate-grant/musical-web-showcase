@@ -26,6 +26,7 @@ time, mark, audio, video {
   vertical-align: baseline;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* article, aside, details, figcaption, figure,
@@ -50,7 +51,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .containter {
+  width: 100vw;
+  height: 100vh;
   z-index: 100;
+  overflow: hidden;
 }
 
 #spiral-container {
