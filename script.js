@@ -55,13 +55,14 @@ audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fc
       sound.pause();
       button.style.backgroundImage = "url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/btn_1_goo.png?v=1683791123149)";
       // button.innerHTML = 'START';
-      button.innerHTML = 'START';
+      button.alt = 'play';
       state.audio = 0.0;
       state.currAudio = 0.0;
     } else {
       sound.play();
-      button.style.backgroundImage = "url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/btn_1_pause_pxl.png?v=1683792622966)";
+      button.style.backgroundImage = "url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/btn_1_pause_d.png?v=1683793083078)";
       // button.innerHTML = 'STOP';
+      button.alt = 'pause';
     }
     
   }, false);
