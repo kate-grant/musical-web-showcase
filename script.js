@@ -1,4 +1,4 @@
-// Based on Shader Park tutorial https://glitch.com/~starter-template-audio-reactive-shader-three-js-shader-park
+// Based on Shader Park shader library tutorial https://glitch.com/~starter-template-audio-reactive-shader-three-js-shader-park
 
 import { AudioListener, Audio, AudioLoader, AudioAnalyser, Clock } from 'three';
 import { Scene, SphereGeometry, Vector3, PerspectiveCamera, WebGLRenderer, Color, MeshBasicMaterial, Mesh} from 'three';
@@ -34,7 +34,6 @@ let state = {
   time: 0.0,
   audio: 0.0,
   currAudio: 0.0,
-  isPlaying: false,
 }
 
 let button = document.getElementById('play-button');
@@ -55,11 +54,11 @@ audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fc
     if (sound.isPlaying) {
       sound.pause();
       button.innerHTML = 'START';
-      state.isPlaying = true;
+      state.audio = 0.0;
+      state.currAudio = 0.0;
     } else {
       sound.play();
       button.innerHTML = 'STOP';
-      state.isPlaying = false;
     }
     
   }, false);

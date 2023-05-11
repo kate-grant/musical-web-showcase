@@ -60,6 +60,8 @@ footer, header, hgroup, menu, nav, section {
 
 #spiral-container {
   top: 0;
+  width: 120vw;
+  height: 120vh;
   z-index: 101;
   fill: none;
   background-color: transparent;
