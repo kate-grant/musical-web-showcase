@@ -39,6 +39,19 @@ floatingArr.forEach((img, i) => {
       artist.classList.add("modal-artist-name");
       artist.innerHTML = data.artistName;
       
+      let media = document.createElement('div');
+      projectInfo.appendChild(media);
+      media.classList.add("modal-project-media");
+      let vid = document.createElement('iframe');
+      media.appendChild(vid);
+      vid.setAttribute("height", data.videoHeight);
+      vid.setAttribute("width", data.videoWidth);
+      vid.setAttribute("src", data.videoLink);
+      
+      let projectDescription = document.createElement('p');
+      projectInfo.appendChild(projectDescription);
+      artist.innerHTML = data.projectDescription;
+      
       
     });
   }, i * 3000);  
