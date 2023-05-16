@@ -5,6 +5,7 @@ import { Scene, SphereGeometry, Vector3, PerspectiveCamera, WebGLRenderer, Color
 import { OrbitControls } from 'https://unpkg.com/three@0.146/examples/jsm/controls/OrbitControls.js';
 import { createSculptureWithGeometry } from 'https://unpkg.com/shader-park-core/dist/shader-park-core.esm.js';
 import { spCode } from '/sp-code.js';
+import { projectData } from '/project-data.js';
 
 const floating = document.getElementsByClassName("floating");
 const floatingArr = Array.from(floating);
@@ -17,7 +18,27 @@ floatingArr.forEach((img, i) => {
     img.style.visibility = "visible";
     img.addEventListener("click", () => {
       modal.classList.toggle('hide');
-      let titleNode = document.createElement('div');
+           
+      let data;
+      
+      if (projectData && projectData[`${img.id}`]) {
+        console.log("DATA", projectData[`${img.id}`]);
+        data = projectData[`${img.id}`];
+      } else {
+        data = {projectName: "none", artistName: "none", videoLink: "", videoHeight: "0", videoWidth: "0", projectDecription: "none"}
+      }
+      
+      
+      let title = document.createElement('h1');
+      projectInfo.appendChild(title);
+      title.classList.add("modal-project-title");
+      title.innerHTML = data.projectName;
+      
+      let artist = document.createElement('h2');
+      projectInfo.appendChild(artist);
+      artist.classList.add("modal-artist-name");
+      artist.innerHTML = data.artistName;
+      
       
     });
   }, i * 3000);  
