@@ -9,16 +9,23 @@ import { spCode } from '/sp-code.js';
 const floating = document.getElementsByClassName("floating");
 const floatingArr = Array.from(floating);
 const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("closeBtn");
 
 floatingArr.forEach((img, i) => {
   setTimeout(function(){
     img.style.visibility = "visible";
     img.addEventListener("click", () => {
-      modal.classList.toggle('show');
+      modal.classList.toggle('hide');
       console.log("CLICK");
     });
   }, i * 3000);  
-})
+});
+
+closeBtn.addEventListener("click", () => {
+      modal.classList.toggle('hide');
+      console.log("CLICK CLOSE");
+    });
+
 
 let scene = new Scene();
 

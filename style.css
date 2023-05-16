@@ -206,11 +206,22 @@ time, mark, audio, video {
 }
 
 #modal {
-    visibility: hide;
+  position: absolute;
+  height: 85vh;
+  margin-top: 15vh;
+  background-color: none;
+  z-index: 300;
 }
 
-.show {
-  visibility: visible;
+.modal-project-card {
+  background-color: #ffffff;
+  
+  opacity: 30%;
+}
+
+.hide {
+  visibility: hidden;
+  z-index: 0;
 }
 
 @keyframes bounce {
