@@ -8,10 +8,15 @@ import { spCode } from '/sp-code.js';
 
 const floating = document.getElementsByClassName("floating");
 const floatingArr = Array.from(floating);
+const modal = document.getElementById("modal");
 
 floatingArr.forEach((img, i) => {
   setTimeout(function(){
     img.style.visibility = "visible";
+    img.addEventListener("click", () => {
+      modal.classList.toggle('show');
+      console.log("CLICK");
+    });
   }, i * 3000);  
 })
 
@@ -26,7 +31,6 @@ let renderer = new WebGLRenderer({ canvas: canvas, antialias: true, transparent:
 renderer.setSize( window.innerWidth, window.innerHeight);
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setClearColor( new Color(1, 1, 1), 0);
-// document.body.appendChild( renderer.domElement );
 
 let clock = new Clock();
 
@@ -41,10 +45,8 @@ let button = document.getElementById('play-button');
 const listener = new AudioListener();
 camera.add( listener );
 
-// create a global audio source
 const sound = new Audio( listener );
 
-// load a sound and set it as the Audio object's buffer
 const audioLoader = new AudioLoader();
 audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/irreducible-111374.mp3?v=1683555316658', function( buffer ) {
 	sound.setBuffer( buffer );
@@ -143,3 +145,4 @@ canvas.addEventListener( 'scroll', () => {
 const spiral = document.getElementById("spiral");
 
 spiral.setAttribute("viewBow", `0 0 ${window.innerHeight} ${window.innerHeight}`);
+

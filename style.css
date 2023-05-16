@@ -205,6 +205,13 @@ time, mark, audio, video {
   cursor: pointer;
 }
 
+#modal {
+    visibility: hide;
+}
+
+.show {
+  visibility: visible;
+}
 
 @keyframes bounce {
   from {
