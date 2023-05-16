@@ -213,7 +213,7 @@ time, mark, audio, video {
   background-color: rgba(218, 247, 69,0.75);
   font-size: 1.5rem;
   z-index: 300;
-  overflow: auto;
+
 }
 
 #closeBtn {
@@ -226,23 +226,24 @@ time, mark, audio, video {
   border: 2px solid #000000;
   border-radius: 50px;
   justify-self: center;
-  align-self: end;
 }
 
 .modal-project-card {
+  display: block;
   width: 65vw;
   height:auto;
-  max-height: 65vh;
+  max-height: 70vh;
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: #f4f5ed;
   border-radius: 25px;
   opacity: 100%;
   justify-self: center;
   align-self: center;
   overflow: auto;
 }
-.modal-project-info {
-  overflow: auto;
+div modal .modal-project-info, .modal-project-container {'
+  display: block;
+  overflow: auto !important;
 }
 
 .modal-project-title {
