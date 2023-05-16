@@ -211,7 +211,9 @@ time, mark, audio, video {
   width: 100vw;
   height: 100vh;
   background-color: rgba(218, 247, 69,0.75);
+  font-size: 1.5rem;
   z-index: 300;
+  overflow: auto;
 }
 
 #closeBtn {
@@ -230,12 +232,25 @@ time, mark, audio, video {
 .modal-project-card {
   width: 65vw;
   height:auto;
+  max-height: 65vh;
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 25px;
   opacity: 100%;
   justify-self: center;
   align-self: center;
+  overflow: auto;
+}
+.modal-project-info {
+  overflow: auto;
+}
+
+.modal-project-title {
+  font-size: 2.5rem;
+}
+
+.modal-artist-name {
+  font-size: 2rem;
 }
 
 .hide {
