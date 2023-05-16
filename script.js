@@ -50,7 +50,7 @@ floatingArr.forEach((img, i) => {
       
       let projectDescription = document.createElement('p');
       projectInfo.appendChild(projectDescription);
-      artist.innerHTML = data.projectDescription;
+      projectDescription.innerHTML = data.projectDescription;
       
       
     });
