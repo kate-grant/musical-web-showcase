@@ -39,6 +39,11 @@ floatingArr.forEach((img, i) => {
       artist.classList.add("modal-artist-name");
       artist.innerHTML = data.artistName;
       
+       let projectLink = document.createElement('h3');
+      projectInfo.appendChild(projectLink);
+      projectLink.classList.add("modal-project-link");
+      projectLink.innerHTML = data.projectLink;
+      
       let media = document.createElement('div');
       projectInfo.appendChild(media);
       media.classList.add("modal-project-media");
