@@ -29,6 +29,12 @@ time, mark, audio, video {
   overflow: hidden;
 }
 
+a {
+  background-color: #000000;
+  color: #daf745;
+  text-decoration: none;
+  width: fit-content;
+}
 
 #heading-container {
   position: fixed;
@@ -241,6 +247,7 @@ time, mark, audio, video {
   align-self: center;
   overflow: auto;
 }
+
 div modal .modal-project-info, .modal-project-container {'
   display: block;
   overflow: auto !important;
@@ -262,6 +269,7 @@ div modal .modal-project-info, .modal-project-container {'
   visibility: hidden;
   z-index: 0;
 }
+
 
 @keyframes bounce {
   from {
