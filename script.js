@@ -10,20 +10,21 @@ const floating = document.getElementsByClassName("floating");
 const floatingArr = Array.from(floating);
 const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("closeBtn");
+const projectInfo = document.getElementById("modal-project-info")
 
 floatingArr.forEach((img, i) => {
   setTimeout(function(){
     img.style.visibility = "visible";
     img.addEventListener("click", () => {
       modal.classList.toggle('hide');
-      console.log("CLICK");
+      let titleNode = document.createElement('div');
+      
     });
   }, i * 3000);  
 });
 
 closeBtn.addEventListener("click", () => {
       modal.classList.toggle('hide');
-      console.log("CLICK CLOSE");
     });
 
 
