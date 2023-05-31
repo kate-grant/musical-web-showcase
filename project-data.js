@@ -7,7 +7,7 @@ export const projectData = {
     videoHeight:"315", 
     videoWidth:"420", 
     projectDescription: "Through my work &quot;YouAreAmI&quot;, I explore the concept of shared space and the emotions that arise from being in it. As someone who craves both togetherness and independence, I am fascinated by the connections that are formed--wanted or not--in shared spaces. To explore this, &quot;YouAreAmI&quot; uses a premade additive oscillator synth module that I've modified using proximity between users as a way to manipulate pitch and harmonic decay. The idea is that the proximity between users creates a feeling of increased activity, anxiety, distraction, or intimacy, much like sharing physical space. I offer participants text inputs that prompt and collect communication, which is further processed for sentiment value by a machine learning model trained on poetry. Sentiment is communicated actively and passively by participants, and can be experienced through the shared impact of participant behavior as expressed in the visual field and in additional synthesizer parameters. I use graphics of airbrushed squiggly lines as a backdrop to create a soft, vulnerable feeling that is reminiscent of the complexity of emotions that arise in shared spaces.", 
-    artistBio: "Kate Grant is a musician, technologist, and internet radio dj with work that focuses on recording the aural landscapes of Brooklyn’s urban ecosystems as a frame for composed and generative music. Under the name Inachis, she performs guitar and hardware-based compositions. In June 2021 she released an album of brief sketches based on the generational changes in urbanization and return of healthy ecosystems to the Southern Brooklyn wetlands, a project that incorporated field recordings made in public parks. After years as a technology autodidact and programming polyglot, she recently pursued training in software engineering, with an interest in audio technology and signal processing. She studied music at CUNY Hunter College."
+    artistBio: "Kate Grant is a musician, technologist, and internet radio dj with work that focuses on recording the aural landscapes of Brooklyn’s urban ecosystems as a frame for composed and generative music. Under the name Inachis, she performs guitar and hardware-based compositions. In June 2021 she released an album of brief sketches based on the generational changes in urbanization and return of healthy ecosystems to the Southern Brooklyn wetlands, a project that incorporated field recordings made in public parks. After years as a technology autodidact and programming polyglot, she recently pursued training in software engineering, with an interest in audio technology and signal processing. She studied music at CUNY Hunter College. You can see what she is currently building at <a href=&quothttps://www.kate-grant.com&quot target=&quotblank&quot>https://www.kate-grant.com</a>"
   }, 
   a: {
     projectName: "Re-arranging", 
@@ -92,11 +92,31 @@ export const projectData = {
   i: {
     projectName: "Toward an Unreal Land Writing", 
     artistName:"Stephen Anderson", 
-    projectLink: "https://rearranging.glitch.me/", 
+    projectLink: "https://realake.glitch.me/", 
     videoLink: "", 
     videoHeight:"315", 
     videoWidth:"420", 
-    projectDescription: "My work fills the long standing desire in my life to be able to throw a guitar across a room - I wanted to make a 3D space where you can interact with all sorts of different sounds and see how they interact with one another.", 
-    artistBio:"Ali is a musician and software engineer based out of Brooklyn, NY."
+    projectDescription: "For this study, I composed a soundscape using samples of land writing on the Great Salt Lake. I built a simple website to contain the sound file, along with an analysis of the writing samples and an explanatory essay. The recorded vocals were processed using RNBO guitar pedals. Other sound elements include monophonic synth, field recordings from GSL, and public domain piano samples.", 
+    artistBio:"Stephen Anderson is a writer and sound artist in Salt Lake City. He is currently producing a longform sound essay on the built infrastructure of the Great Salt Lake. An amateur and self-taught audiophile, his sound work also extends to beatmaking and DJing, with a focus on disco, classical electronics, and progressive dance music. He is a former board member of Terrain Exhibitions."
+  },
+  j: {
+    projectName: "Mobile Choir", 
+    artistName:"Izzie Colpitts-Campbell", 
+    projectLink: "MobileChoir.com", 
+    videoLink: "", 
+    videoHeight:"315", 
+    videoWidth:"420", 
+    projectDescription: "Mobile Choir uses granular synthesis to explore multiuser composition and connection over the web. Participants can join as a player or a listener. Players use the gyroscope in their phone to control 1 of 5 available voices in the composition. Depending on the number of users and each phones movements, the parameters of the granular synthesis changes across each instance of the website.", 
+    artistBio:"Izzie is a designer by trade and and artist by nature. Her work includes software and electronic art, queer and feminist grassroots organizing and developing platforms for creating artist run networks online. "
+  },
+  k: {
+    projectName: "Memory Garden", 
+    artistName:"Taylor Paydos", 
+    projectLink: "https://memorygarden.glitch.me/", 
+    videoLink: "", 
+    videoHeight:"315", 
+    videoWidth:"420", 
+    projectDescription: "The piece Memory Garden is based around a physical box I have containing various objects I've held onto from old friendships and exes. These items are rarely looked at IRL so I wanted to create a place to hold them that felt more like a haven/dream state than a confined space. I created sounds with my friends synth + phone recordings that I associate with the moods of the objects and memories to create a soundscape. This piece contains a lot of emotional relief and reflection.", 
+    artistBio:"Taylor Paydos is a Brooklyn based digital artist and engineer. They work with physical computation, experimental web work, and film. Within their web work they have been combining video, creative coding, machine learning, and AI to create dialogues around digital consent and the avatar. Within their film work they have been interested in how narratives can be constructed using computer interfaces and the boundaries that can be pushed within that."
   }, 
 }
