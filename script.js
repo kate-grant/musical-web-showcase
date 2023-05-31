@@ -19,6 +19,7 @@ const projectInfo = document.getElementById("modal-project-info")
       let media;
       let vid;
       let projectDescription = null;
+      let artistBio
 
 floatingArr.forEach((img, i) => {
   setTimeout(function(){
@@ -68,6 +69,11 @@ floatingArr.forEach((img, i) => {
         projectDescription = document.createElement('p');
         projectInfo.appendChild(projectDescription);
         projectDescription.innerHTML = data.projectDescription;
+        
+        artistBio = document.createElement('artistBio');
+        projectInfo.appendChild(artistBio);
+        projectDescription.innerHTML = data.artistBio;
+        
       } else {
         title.innerHTML = data.projectName;
 
@@ -81,6 +87,8 @@ floatingArr.forEach((img, i) => {
         vid.setAttribute("src", data.videoLink);
 
         projectDescription.innerHTML = data.projectDescription;
+        
+        projectDescription.innerHTML = data.artistBio;
       }
       
       
