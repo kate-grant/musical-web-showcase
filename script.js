@@ -57,18 +57,20 @@ floatingArr.forEach((img, i) => {
         projectLink.innerHTML = data.projectLink;
 
 
-        media = document.createElement('div');
-        projectInfo.appendChild(media);
-        media.classList.add("modal-project-media");
-        vid = document.createElement('iframe');
-        media.appendChild(vid);
-        vid.setAttribute("height", data.videoHeight);
-        vid.setAttribute("width", data.videoWidth);
-        vid.setAttribute("src", data.videoLink);
+        // media = document.createElement('div');
+        // projectInfo.appendChild(media);
+        // media.classList.add("modal-project-media");
+        // vid = document.createElement('iframe');
+        // media.appendChild(vid);
+        // vid.setAttribute("height", data.videoHeight);
+        // vid.setAttribute("width", data.videoWidth);
+        // vid.setAttribute("src", data.videoLink);
 
         projectDescription = document.createElement('p');
         projectInfo.appendChild(projectDescription);
         projectDescription.innerHTML = data.projectDescription;
+        
+        console.log("first: ", data.projectDescription)
         
         artistBio = document.createElement('artistBio');
         projectInfo.appendChild(artistBio);
@@ -82,11 +84,12 @@ floatingArr.forEach((img, i) => {
         projectLink.href = data.projectLink;
         projectLink.innerHTML = data.projectLink;
 
-        vid.setAttribute("height", data.videoHeight);
-        vid.setAttribute("width", data.videoWidth);
-        vid.setAttribute("src", data.videoLink);
+        // vid.setAttribute("height", data.videoHeight);
+        // vid.setAttribute("width", data.videoWidth);
+        // vid.setAttribute("src", data.videoLink);
 
         projectDescription.innerHTML = data.projectDescription;
+        console.log("first: ", data.projectDescription)
         
         projectDescription.innerHTML = data.artistBio;
       }
