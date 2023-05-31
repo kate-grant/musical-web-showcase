@@ -70,7 +70,7 @@ floatingArr.forEach((img, i) => {
         
         artistStatement = document.createElement('h3');
         projectInfo.appendChild(artistStatement);
-        artistStatement.innerHTML = "Artist Statement:";
+        artistStatement.innerHTML = "Artist Statement:<br><br>";
 
         projectDescription = document.createElement('p');
         projectInfo.appendChild(projectDescription);
