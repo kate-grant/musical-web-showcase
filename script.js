@@ -13,6 +13,13 @@ const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("closeBtn");
 const projectInfo = document.getElementById("modal-project-info")
 
+      let title;
+      let artist = null;
+      let projectLink;
+      let media;
+      let vid;
+      let projectDescription = null;
+
 floatingArr.forEach((img, i) => {
   setTimeout(function(){
     img.style.visibility = "visible";
@@ -28,12 +35,6 @@ floatingArr.forEach((img, i) => {
         data = {projectName: "none", artistName: "none", videoLink: "", videoHeight: "0", videoWidth: "0", projectDecription: "none"}
       }
       
-      let title;
-      let artist;
-      let projectLink;
-      let media;
-      let vid;
-      let projectDescription;
       
       if (artist === null && projectDescription === null) {
       
@@ -88,8 +89,8 @@ floatingArr.forEach((img, i) => {
 });
 
 closeBtn.addEventListener("click", () => {
-      modal.classList.toggle('hide');
-    });
+  modal.classList.toggle('hide');
+});
 
 
 let scene = new Scene();
