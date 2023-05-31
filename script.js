@@ -28,37 +28,59 @@ floatingArr.forEach((img, i) => {
         data = {projectName: "none", artistName: "none", videoLink: "", videoHeight: "0", videoWidth: "0", projectDecription: "none"}
       }
       
+      let title;
+      let artist;
+      let projectLink;
+      let media;
+      let vid;
+      let projectDescription;
       
-      let title = document.createElement('h1');
-      projectInfo.appendChild(title);
-      title.classList.add("modal-project-title");
-      title.innerHTML = data.projectName;
+      if (artist === null && projectDescription === null) {
       
-      let artist = document.createElement('h2');
-      projectInfo.appendChild(artist);
-      artist.classList.add("modal-artist-name");
-      artist.innerHTML = data.artistName;
-      
-      let projectLink = document.createElement('a');
-      projectInfo.appendChild(projectLink);
-      projectLink.classList.add("modal-project-link");
-      projectLink.href = data.projectLink;
-      projectLink.target = "blank";
-      projectLink.innerHTML = data.projectLink;
+        title = document.createElement('h1');
+        projectInfo.appendChild(title);
+        title.classList.add("modal-project-title");
+        title.innerHTML = data.projectName;
 
-      
-      let media = document.createElement('div');
-      projectInfo.appendChild(media);
-      media.classList.add("modal-project-media");
-      let vid = document.createElement('iframe');
-      media.appendChild(vid);
-      vid.setAttribute("height", data.videoHeight);
-      vid.setAttribute("width", data.videoWidth);
-      vid.setAttribute("src", data.videoLink);
-      
-      let projectDescription = document.createElement('p');
-      projectInfo.appendChild(projectDescription);
-      projectDescription.innerHTML = data.projectDescription;
+        artist = document.createElement('h2');
+        projectInfo.appendChild(artist);
+        artist.classList.add("modal-artist-name");
+        artist.innerHTML = data.artistName;
+
+        projectLink = document.createElement('a');
+        projectInfo.appendChild(projectLink);
+        projectLink.classList.add("modal-project-link");
+        projectLink.href = data.projectLink;
+        projectLink.target = "blank";
+        projectLink.innerHTML = data.projectLink;
+
+
+        media = document.createElement('div');
+        projectInfo.appendChild(media);
+        media.classList.add("modal-project-media");
+        vid = document.createElement('iframe');
+        media.appendChild(vid);
+        vid.setAttribute("height", data.videoHeight);
+        vid.setAttribute("width", data.videoWidth);
+        vid.setAttribute("src", data.videoLink);
+
+        projectDescription = document.createElement('p');
+        projectInfo.appendChild(projectDescription);
+        projectDescription.innerHTML = data.projectDescription;
+      } else {
+        title.innerHTML = data.projectName;
+
+        artist.innerHTML = data.artistName;
+
+        projectLink.href = data.projectLink;
+        projectLink.innerHTML = data.projectLink;
+
+        vid.setAttribute("height", data.videoHeight);
+        vid.setAttribute("width", data.videoWidth);
+        vid.setAttribute("src", data.videoLink);
+
+        projectDescription.innerHTML = data.projectDescription;
+      }
       
       
     });
