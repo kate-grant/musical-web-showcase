@@ -1,6 +1,6 @@
 # The Musical Web Showcase
 
-This website was built to showcase creative works made for the SFPC The Musical Web course, a 3-month exploration of Web Audio. I participated in this course as a student.
+This website was built to showcase creative works made by students during the SFPC The Musical Web course, a 3-month exploration of Web Audio. I participated in this course as a student.
 
 ## Goals
 
