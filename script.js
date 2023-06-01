@@ -12,6 +12,8 @@ const floatingArr = Array.from(floating);
 const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("closeBtn");
 const projectInfo = document.getElementById("modal-project-info")
+const info = document.getElementById("info")
+const infoPane = document.getElementById("info-pane");
 
       let title;
       let artist = null;
@@ -28,19 +30,19 @@ floatingArr.forEach((img, i) => {
     img.style.visibility = "visible";
     img.addEventListener("click", () => {
       modal.classList.toggle('hide');
-           
+
       let data;
-      
+
       if (projectData && projectData[`${img.id}`]) {
         console.log("DATA", projectData[`${img.id}`]);
         data = projectData[`${img.id}`];
       } else {
         data = {projectName: "none", artistName: "none", videoLink: "", videoHeight: "0", videoWidth: "0", projectDecription: "none"}
       }
-      
-      
+
+
       if (artist === null && projectDescription === null) {
-      
+
         title = document.createElement('h1');
         projectInfo.appendChild(title);
         title.classList.add("modal-project-title");
@@ -67,23 +69,23 @@ floatingArr.forEach((img, i) => {
         // vid.setAttribute("height", data.videoHeight);
         // vid.setAttribute("width", data.videoWidth);
         // vid.setAttribute("src", data.videoLink);
-        
+
         artistStatement = document.createElement('h3');
         projectInfo.appendChild(artistStatement);
-        artistStatement.innerHTML = "Artist Statement:<br><br>";
+        artistStatement.innerHTML = "<br>Artist Statement:<br>";
 
         projectDescription = document.createElement('p');
         projectInfo.appendChild(projectDescription);
         projectDescription.innerHTML = data.projectDescription;
-        
+
         bio = document.createElement('h3');
         projectInfo.appendChild(bio);
         bio.innerHTML = "Artist Bio:";
-        
+
         artistBio = document.createElement('p');
         projectInfo.appendChild(artistBio);
         artistBio.innerHTML = data.artistBio;
-        
+
       } else {
         title.innerHTML = data.projectName;
 
@@ -97,17 +99,21 @@ floatingArr.forEach((img, i) => {
         // vid.setAttribute("src", data.videoLink);
 
         projectDescription.innerHTML = data.projectDescription;
-        
+
         artistBio.innerHTML = data.artistBio;
       }
-      
-      
+
+
     });
-  }, i * 3000);  
+  }, i * 3000);
 });
 
 closeBtn.addEventListener("click", () => {
   modal.classList.toggle('hide');
+});
+
+info.addEventListener("click", () => {
+  infoPane.classList.toggle('hide');
 });
 
 
@@ -131,35 +137,11 @@ let state = {
   currAudio: 0.0,
 }
 
-let button = document.getElementById('play-button');
-
 const listener = new AudioListener();
 camera.add( listener );
 
 const sound = new Audio( listener );
 
-const audioLoader = new AudioLoader();
-audioLoader.load( 'https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/irreducible-111374.mp3?v=1683555316658', function( buffer ) {
-	sound.setBuffer( buffer );
-	sound.setLoop( true );
-	sound.setVolume( 0.4);
-	button.addEventListener('pointerdown', () => {
-    if (sound.isPlaying) {
-      sound.pause();
-      button.style.backgroundImage = "url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/btn_1_goo.png?v=1683791123149)";
-      // button.innerHTML = 'START';
-      button.alt = 'play';
-      state.audio = 0.0;
-      state.currAudio = 0.0;
-    } else {
-      sound.play();
-      button.style.backgroundImage = "url(https://cdn.glitch.global/9b48c83c-6c8e-4281-a381-d57318641fca/pause_23.png?v=1683804798277)";
-      // button.innerHTML = 'STOP';
-      button.alt = 'pause';
-    }
-    
-  }, false);
-});
 
 const analyser = new AudioAnalyser( sound, 32 );
 
@@ -197,7 +179,7 @@ let render = () => {
   if(analyser) {
     state.currAudio += Math.pow((analyser.getFrequencyData()[2] / 255) * .81, 8) + clock.getDelta() * .5;
     state.audio = .2 * state.currAudio + .8 * state.audio;
-    
+
   }
   controls.update();
   renderer.render( scene, camera );
@@ -206,30 +188,10 @@ let render = () => {
 render();
 
 const projectSection = document.getElementsByClassName("project-container");
-const projects = document.getElementsByClassName("project-card");
-const projectArray = Array.from(projects);
-
-projectArray.forEach((project, i) => {
-  
-  window.addEventListener("scroll", () => {
-    let scroll = window.scrollY;
-    if (scroll > project.offsetTop - 500) {
-      project.classList.add("show");
-    }
-  });
-  
-  if (i % 2 === 0) {
-    project.classList.add("left");
-  } else {
-    project.classList.add("right");
-    project.style.backgroundColor = "#85a09e";
-  }
-  
-});
 
 canvas.addEventListener( 'scroll', () => {
   const curr = projectSection.getBoundingClientRect();
-  
+
   projectSection.style.top = curr.y - 2;
 });
 
